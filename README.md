@@ -1,63 +1,36 @@
 # Sea-louse parasites on juvenile wild salmon in the Broughton Archipelago, British Columbia, Canada
 
-This repository contains data from long-term monitoring of juvenile salmon for sea lice, by the [Salmon Coast Field Station](www.salmoncoast.org). Questions should be directed to Stephanie Peacock (stephanie.j.peacock@gmail.com).
+This repository contains data from long-term monitoring of juvenile salmon for sea lice, by the [Salmon Coast Field Station](https://www.salmoncoast.org/salmon-coast-projects/sealice/). Questions should be directed to Stephanie Peacock (stephanie.j.peacock@gmail.com).
 
-**Last update:** August 10, 2018; data current through June 2018.
- 
+**Last update:** The 2020 data is in review for release with 2020 Sea Lice Report (as of August 2020).
+**2019 update** The 2019 data has been uploaded. For interpretation, please see the [2019 Sea Lice Report](https://www.salmoncoast.org/wp-content/uploads/2020/04/2019-Sea-lice-report_final.pdf)
+
 ## Using the data
 * **Before** using the data, please read the associated metadata (below)!
 * To download the entire repository, including the data and metadata, click "Download ZIP" under the green "Clone or download" button near the top-right of this page
 * The fish and site data can be accessed at the following URLs:
 
-> [https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_fishData.csv](https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_fishData.csv)
+> [https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/fishData.csv?raw=true](https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/fishData.csv?raw=true)
 
-> [https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_siteData.csv](https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_siteData.csv)
+> [https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/siteData.csv?raw=true](https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/siteData.csv?raw=true)
 
 * To import import the fish and site data directly into R simply use the `source_data` function in the `repmis` package:
 
 ```
-FishData <- repmis::source_data(url = "https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_fishData.csv")
-SiteData <- repmis::source_data(url = "https://raw.githubusercontent.com/sjpeacock/Sea-lice-database/master/Data/BroughtonSeaLice_siteData.csv")
+fishData <- repmis::source_data(url = "https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/fishData.csv?raw=true")
+siteData <- repmis::source_data(url = "https://github.com/salmoncoast/Sea-lice-database/blob/master/Data/siteData.csv?raw=true")
 ```
-
-## Authors
-
-Stephanie J Peacock (1,†), Andrew W Bateman (1,2,3,†), Martin Krkosek (2,3), Brendan Connors (4), Scott Rogers (3,5), Lauren Portner (3), Zephyr Polk (3), Coady Webb (3), Alexandra Morton (3,6)
-
-1. Department of Biological Sciences, University of Alberta, Edmonton, AB T6G 1E9
-2. Ecology and Evolutionary Biology, University of Toronto, Toronto, ON M5S 3B2 
-3. Salmon Coast Field Station, Simoom Sound, BC V0P 1S0 
-4. ESSA Technologies Ltd., Vancouver, BC V6H 3H4
-5. Raincoast Conservation Foundation, Sidney, BC V8L 3Y3
-6. Raincoast Research Society, Sointula, BC V0N 3E0
-
-† Joint first authors
-
-## Abstract
-
-The global expansion of aquaculture has changed the structure of fish populations in coastal environments, with implications for disease dynamics. In Pacific Canada, farmed salmon act as reservoir hosts for parasites and pathogens, including sea lice (*Lepeophtheirus salmonis* and *Caligus clemensi*) that can transmit to migrating wild salmon.  Assessing the impact of salmon farms on wild salmon requires regular monitoring of sea-louse infections on both farmed and wild fish. Since 2001, we have collected juvenile pink (*Oncorhynchus gorbuscha*) and chum (*O. keta*) salmon annually at three sites in the Broughton Archipelago in British Columbia, Canada, during the annual juvenile-salmon migration from freshwater to the open ocean.  From sampled fish, we recorded counts of parasitic copepodid-, chalimus-, and motile-stage sea lice.  We report louse abundances as well as supplementary observations of fish size, development, and health.
-
-**Keywords:** aquaculture, conservation, parasite, salmon, sea lice
-
-## Introduction
-
-Increased salmon aquaculture production over the past several decades (Goldburg and Naylor 2005) has been associated with the decline of wild salmonid stocks around the world (Ford and Myers 2008).  On the west coast of Canada, the expansion of Atlantic salmon (*Salmo salar*) aquaculture has raised concerns about impacts to wild salmon as a result of the amplification of naturally occurring parasitic sea lice (*Lepeophtheirus salmonis* and *Caligus clemensi*).  In certain areas of coastal British Columbia (BC), sea-louse infestations on salmon farms have been implicated in wild-salmon population declines (Krkosek et al. 2011b).  
-
-For some populations of pink salmon (*Oncorhynchus gorbuscha*) and chum salmon (*Oncorhynchus keta*), juveniles must migrate directly past open-net salmon farms anchored near to shore as they migrate from their natal streams and rivers to open-ocean habitats.   Along these routes, sea lice can disperse from farmed salmon and infect juvenile wild salmon, often before the wild salmon develop protective scales, leading to increased predation susceptibility an reduced survival (Krkosek et al. 2006, 2011a).  Pink salmon populations have shown significantly reduced productivity when louse levels are high (Krkosek et al. 2011b), however, chum salmon have not (Peacock et al. 2014). Recent farm-management practices appear to have halted earlier declines in pink salmon productivity (Peacock et al. 2013), although sea louse infestation levels were once again elevated in 2015 (Bateman et al., in review).
-
-Since 2001, we have carried out monitoring of sea-louse infestation levels on wild-caught juvenile pink and chum salmon in the Broughton Archipelago, BC, an area of active salmon aquaculture. The data we have collected have been used to quantify temporal trends in parasites burdens to inform questions of ecological, conservation, management and policy relevance. Here, we make these data that have resulted from this long term monitoring program available.
 
 ## Contents of this repository:
 
 ### Metadata files:
-* fish_variableDescriptions.csv - describes columns in BroughtonSeaLice_fishData.csv
-* site_variableDescriptions.csv - describes columns in BroughtonSeaLice_siteData.csv
+* fishVariableDescriptions.csv - describes columns in fishData.csv
+* siteVariableDescriptions.csv - describes columns in siteData.csv
 * Figures - subfolder containing all figures.
 
 ### Data files:
 * BroughtonSeaLice_fishData.csv - contains the individual fish health and sea louse counts from 2001 to present.
 * BroughtonSeaLice_siteData.csv - contains the site data (location, temperature, salinity etc.) for each sampling location/date combination.
-
 
 # METADATA
 
@@ -69,8 +42,8 @@ Sea-louse parasites on juvenile wild salmon in the Broughton Archipelago, Britis
 
 ### B. Data set identification code
 
-1. Site data: BroughtonSeaLice_siteData.csv
-2. Fish data: BroughtonSeaLice_fishData.csv
+1. Site data: siteData.csv
+2. Fish data: fishData.csv
 
 ### C. Data set description
 
@@ -110,16 +83,14 @@ Sampling occurred in the coastal marine environment within ~10 m of shoreline.
 
 The Broughton Archipelago lies within the regional district of Mount Waddington in British Columbia, Canada. Sample locations were between 50 46.237' N to 50 57.267' N and 126 17.035' W to 126 41.522' W (Fig. 1).  The area is Musgamagw Dzawada’enuxw Territory and has a rich history of use by indigenous people. The inlets and channels are home to abundant wildlife, and provide nursery habitat for marine and anadromous fishes.  Sampling locations were situated along juvenile pink and chum migration routes, as they swim from natal streams and rivers towards the open ocean (Fig. 1).
 
-
-![Fig1](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig1.png)
+![Fig1](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig1.png)
 **Fig. 1.**  Map of the study area showing the three locations (Glacier, Burdwood, and Wicklow) where juvenile salmon were monitored for sea louse parasites, as well as the locations of all salmon farms that were active at some point during monitoring from 2001-2015.
 
 ##### c. Habitat
 
 Juvenile salmon were usually found close to shore, in water depths from one to five metres below surface, in bays sheltered from strong tidal currents and waves. Tides range from one to four metres, and the shoreline habitat is often dependent on tide height, ranging from rocky intertidal to shell beaches to forest edge. Because sampling occurred on a regular weekly basis during daylight hours, tide height could not be controlled for when sampling. Towards the end of the annual sampling period, in June, beds of bull kelp (*Nereocystis luetkeana*) developed in which the salmon could be found at low tide, and occasionally we sampled in these beds. As the season progressed, and juvenile salmon grew, they would occur at greater depths and further offshore, but never more than ~10 metres (as we made collections by beach seine, we limited our search zone to the near-shore environment; Fig. 2).
 
-
-![Fig2](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig2.png)
+![Fig2](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig2.png)
 **Fig. 2.** Setting a beach seine on Denham Island at high tide near the Burdwood location. This image illustrates the typical shoreline and landscape of the Broughton Archipelago. Photo credit: Stephanie Peacock
 
 
@@ -137,24 +108,22 @@ The hydrology of the Broughton Archipelago is comprised of a network of inter-is
 
 We designed the sea lice monitoring program to generate a long-term abundance time series of sea louse parasites on wild juvenile salmon at three sampling locations (Fig. 1).  While parallel studies have sought to characterize sea-louse abundance as a function of farm proximity (e.g., Krkosek et al. 2005a, 2006), the data we present here were collected to assess temporal patterns related to salmon-farm development, stocking, and changes to sea lice management including the timing of treatments with chemotherapeutants (Peacock et al. 2013).
 
-The distribution of sea lice among hosts tends to be clustered (Murray 2002), requiring a relatively large sample size to accurately describe the distribution of parasites.  Thus, we aimed to sample 50 pink and 50 chum salmon at each sample site, although we were often limited by salmon availability and did not always achieve this. In early years (2001-2006), there were usually no more than 50 salmon total sampled at each site, while in later years (2007-2015) we regularly achieved a sample size of 100 salmon (Fig. 3; also summarized in site data). Pink salmon were usually more abundant than chum salmon.  From 2007 to 2012, if we did not obtain our sample goal of 50 chum salmon at a given site, we examined  additional pink salmon (if available) to reach the 100-salmon target.  From 2013-2015, we aimed for 50 pink salmon and 50 chum salmon, but we did not supplement the sample when either species was limiting (Fig. 3). 
+The distribution of sea lice among hosts tends to be clustered (Murray 2002), requiring a relatively large sample size to accurately describe the distribution of parasites.  Thus, we aimed to sample 50 pink and 50 chum salmon at each sample site, although we were often limited by salmon availability and did not always achieve this. In early years (2001-2006), there were usually no more than 50 salmon total sampled at each site, while in later years (2007-2015) we regularly achieved a sample size of 100 salmon (Fig. 3; also summarized in site data). Pink salmon were usually more abundant than chum salmon.  From 2007 to 2012, if we did not obtain our sample goal of 50 chum salmon at a given site, we examined  additional pink salmon (if available) to reach the 100-salmon target.  From 2013-2015, we aimed for 50 pink salmon and 50 chum salmon, but we did not supplement the sample when either species was limiting (Fig. 3).
 
 
-![Fig3](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig3.png)
+![Fig3](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig3.png)
 **Fig. 3.** The number of pink salmon (grey) and chum salmon (black) sampled at three locations: (a) Glacier, (b) Burdwood and (c) Wicklow, from 2001 to 2015.
 
 ##### b. Permanent plots
 
-We carried out sampling at three locations referred to as Glacier, Burdwood, and Wicklow, in reference to their geographic locations near "Glacier Falls" in Tribune Channel, within the Burdwood Group, and in Wicklow Bay of Fife Sound, respectively (Fig. 1).  Exact sampling sites within an approximate one-kilometre radius of our three sampling locations varied from day to day, in accordance with weather conditions and availability of juvenile salmon schools.  We took GPS coordinates of sample sites sporadically from 2011 to 2012, and more consistently since 2013. When available, we provide latitude and longitude (decimal degrees) with each site location (Glacier, Burdwood, or Wicklow) in the site data file. These sites were selected because of their location along a major migration route of juvenile salmon and proximity to salmon farms (Fig. 1).  The status of salmon farm tenures at each site varied from year to year between fallow and stocked with smolt or adult Atlantic salmon (for farm stocking and sea lice, see supplemental data to Marty et al. 2010). 
+We carried out sampling at three locations referred to as Glacier, Burdwood, and Wicklow, in reference to their geographic locations near "Glacier Falls" in Tribune Channel, within the Burdwood Group, and in Wicklow Bay of Fife Sound, respectively (Fig. 1).  Exact sampling sites within an approximate one-kilometre radius of our three sampling locations varied from day to day, in accordance with weather conditions and availability of juvenile salmon schools.  We took GPS coordinates of sample sites sporadically from 2011 to 2012, and more consistently since 2013. When available, we provide latitude and longitude (decimal degrees) with each site location (Glacier, Burdwood, or Wicklow) in the site data file. These sites were selected because of their location along a major migration route of juvenile salmon and proximity to salmon farms (Fig. 1).  The status of salmon farm tenures at each site varied from year to year between fallow and stocked with smolt or adult Atlantic salmon (for farm stocking and sea lice, see supplemental data to Marty et al. 2010).
 
 ##### c. Data collection period, frequency, etc.
 
-The frequency of monitoring has been variable, particularly in the early years of monitoring (Fig. 4).  More recently, we have aimed to monitor all three sites on a weekly basis from April 1st to June 30th.  In some years, we did not monitor Wicklow, the site furthest from the wild-salmon spawning rivers, at the beginning of the season, because there were no juvenile salmon to be found there.  Similarly, later in some years, we did not monitor Glacier, the site closest to the spawning rivers, for lack of fish (e.g., 2001, 2009; Fig. 4). 
+The frequency of monitoring has been variable, particularly in the early years of monitoring (Fig. 4).  More recently, we have aimed to monitor all three sites on a weekly basis from April 1st to June 30th.  In some years, we did not monitor Wicklow, the site furthest from the wild-salmon spawning rivers, at the beginning of the season, because there were no juvenile salmon to be found there.  Similarly, later in some years, we did not monitor Glacier, the site closest to the spawning rivers, for lack of fish (e.g., 2001, 2009; Fig. 4).
 
-
-![Fig4](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig4.png)
+![Fig4](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig4.png)
 **Fig. 4.** The sampling window from 2001-2015, showing dates within each year that the three monitoring sites were sampled for juvenile salmon. In recent years, we have aimed to sample weekly for April through May, inclusive (cyan band) to coincide with the period of greatest juvenile pink and salmon outmigration.
-
 
 #### 3. Research methods
 
@@ -166,12 +135,11 @@ In all years, we began juvenile-salmon collection at a site by visually searchin
 
 After capture, we transferred juvenile salmon into seawater-filled buckets either directly from the dip net (2001 through 2003) or from the bunt of the beach seine net using small dip nets.  From 2001 through 2004, we transferred juvenile salmon from the buckets into individual sample bags, placed them on ice, and later froze them for subsequent laboratory analysis. In the lab, we analyzed frozen samples under a dissecting microscope at 30x magnification.  From 2005 through 2015, we analyzed juvenile salmon non-lethally on site, using a 16x magnification hand lens to visually assay individual fish in clear plastic envelopes made from Ziploc® bags (detailed methods and assessment in Krkosek et al. 2005b).  
 
-For each juvenile salmon sampled, we recorded species (pink, *O. gorbuscha*, or chum, *O. keta*).  Occasionally, we encountered other salmon species (e.g., *O. kisutch* and *O. nerka*), Pacific herring (*Clupea pallasii*), or threespine stickleback (*Gasterosteus aculeatus*) and examined these for sea lice, but the corresponding data are not part of this dataset. 
+For each juvenile salmon sampled, we recorded species (pink, *O. gorbuscha*, or chum, *O. keta*).  Occasionally, we encountered other salmon species (e.g., *O. kisutch* and *O. nerka*), Pacific herring (*Clupea pallasii*), or threespine stickleback (*Gasterosteus aculeatus*) and examined these for sea lice, but the corresponding data are not part of this dataset.
 
 We recorded fork length (from the "fork" in the tail, the most anterior portion of the tails posterior edge, to the anterior tip of the snout) and, in years 2003, 2004, 2006, and 2010 through 2015, body depth (the greatest dorsal-ventral measurement of a juvenile’s body, not including its fins) to the nearest millimetre by measuring the salmon against 1 mm graph paper (Fig. 5A). In 2004 and 2005, some fish were measured with digital calipers and so the fork lengths are given to one decimal place in mm.
 
-
-![Fig5](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig5.png)
+![Fig5](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig5.png)
 **Fig. 5.** A. Measurements of fork length and, in some years, body depth to the nearest mm were recorded for each salmon. B. We noted damage from, for example, predators. Highlighted with an arrow is a semi-circular scar from a fish predator. C. Pinched belly (PB) occurred when a chalimus-stage louse attached to the ventral surface causing the epidermis to scar and pinch as the fish grows. D. Copepodid- and chalimus-stage lice were identifiable under a 16x hand lens.  Shown here are a copepodid-stage L. salmonis (C, black arrow), and several chalimus-stage lice (species unknown; H, white arrows). The upper two chalimus stage lice have accompanying chalimus scars that would be noted. E. An example of a chalimus scar (CS) from the attachment of chalimus-stage louse (H). Blue blotches can be seen on the dorsal surface. F. An eroded gill (EG) was noted, and if a louse was attached nearby this was accompanied by a comment of a grazed gill place (GGP).  Shown also is a chalimus scar beneath the dorsal fin (CS).
 
 ###### Louse identification
@@ -180,9 +148,8 @@ We categorized the species (*L. salmonis* or *C. clemensi*) and stages of attach
 
 Occasionally, we observed adult male sea lice firmly attaching to the posterior end of pre-adult female sea lice.  We noted this behaviour as "mate guarding" on the datasheet, as it may be of interest in studies of dispersal and mate limitation (e.g., Connors et al. 2011).
 
-![Fig6](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig6.png)
+![Fig6](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig6.png)
 **Fig. 6.** The relationships among unique columns in the dataset: italic grey words are the unique stages/sex/species that are differentiated in the dataset.  In early years (2001-2006) not all stages/species were distinguished; see text for details.
-
 
 ###### Fish health observations
 
@@ -192,9 +159,9 @@ In addition to louse counts, we recorded any evidence of predation and noted whe
 
 Beginning in 2018, we also recorded the presence of opaque sections in the eyes of juvenile salmon. It is unknown what the causes or consequences of this "white eye" are, but it is anecdotally increasing in frequency and also present among farmed salmon. Observations are noted as "1" if there is any presence of white opaque sections in a fish's eye (Fig. 7).
 
-After non-lethal examination, we allowed fish to recover in a 20 litre seawater-filled bucket and then released them at the location of capture. We noted any mortalities of salmon that had been examined and (separately) any mortalities of salmon held in the net or buckets but not examined. Before releasing all salmon captured, we also estimated and recorder the total number of pink and chum salmon captured and the ratio of pink to chum salmon in the school.  This information is available with the site data. 
+After non-lethal examination, we allowed fish to recover in a 20 litre seawater-filled bucket and then released them at the location of capture. We noted any mortalities of salmon that had been examined and (separately) any mortalities of salmon held in the net or buckets but not examined. Before releasing all salmon captured, we also estimated and recorder the total number of pink and chum salmon captured and the ratio of pink to chum salmon in the school.  This information is available with the site data.
 
-![Fig7](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig7.png)
+![Fig7](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig7.png)
 **Fig. 7.**  Pictures of three juvenile salmon showing the presence of "white eye" with a small, cloudy spot in the centre of the eye (a), a larger opaque section (b), and a more severe case where the opaque section covers most of the eye (c). All of these cases would be scored as "1" indicating the presence of white eye.
 
 ##### b. Instrumentation
@@ -214,7 +181,7 @@ Latin name |  Common name(s)
 *Oncorhynchus nerka* | sockeye salmon, red salmon
 *Oncorhynchus kisutch* |coho salmon
 *Oncorhynchus tsawytscha* |Chinook salmon, spring salmon, king salmon
-*Oncorhynchus clarkii clarkii*	|(coastal) cutthroat trout 
+*Oncorhynchus clarkii clarkii*	|(coastal) cutthroat trout
 *Clupea pallasii pallasii* | Pacific herring
 *Ammodytes hexapterus* | Pacific sand lance
 *Aulorhynchus flavidus* | tube-snout
@@ -225,8 +192,7 @@ Latin name |  Common name(s)
 *Lepeophtheirus salmonis* | salmon louse
 *Caligus clemensi* | herring louse
 
-*Species and common names are as recorded at www.marinespecies.org.
-
+*Species and common names are as recorded at [http://www.marinespecies.org/](marinespecies.org).
 
 ##### d. Permit history
 
@@ -234,9 +200,9 @@ Each year, a Scientific Fishing Permit from Fisheries and Oceans Canada was issu
 
 #### 4. Project personnel
 
-Alexandra Morton conceived and initiated the monitoring program. Martin Krkosek, Brendan Connors, Scott Rogers and Lauren Portner facilitated the evolution of the monitoring protocol, particularly with regards to sea louse identification. Stephanie Peacock and Andrew Bateman initiated and undertook the cleaning of the data and writing of these metadata, in addition to their monitoring contributions over the years. Throughout the years, the managers of the Salmon Coast Field Station - Scott Rogers, Zephyr Polk and Coady Webb - played a significant role in organizing and facilitating the monitoring. 
+Alexandra Morton conceived and initiated the monitoring program. Martin Krkosek, Brendan Connors, Scott Rogers and Lauren Portner facilitated the evolution of the monitoring protocol, particularly with regards to sea louse identification. Stephanie Peacock and Andrew Bateman initiated and undertook the cleaning of the data and writing of these metadata, in addition to their monitoring contributions over the years. Throughout the years, the managers of the Salmon Coast Field Station - Scott Rogers, Zephyr Polk and Coady Webb - played a significant role in organizing and facilitating the monitoring.
 
-A small army of people have beach seined and "sea liced," including (but not limited to, in no particular order): Amy McConnell, Claudia Maas and Oline Luninberg (The RubberMaids), Dane Stabel, Caitlin Currey, Helen Page (née Ford), Kersti Vaino, Ashley Powell (née Park), Megan Adams, Marie-Josée Gagnon, Jordan Flanagan, Sean Godwin, Leah Walker, Mack Bartlett, Julia Simmerling, Alex Spicer, Christina Weir, Alex Reiss, and Anna Crandall. 
+A small army of people have beach seined and "sea liced," including (but not limited to, in no particular order): Amy McConnell, Claudia Maas and Oline Luninberg (The RubberMaids), Dane Stabel, Caitlin Currey, Helen Page (née Ford), Kersti Vaino, Ashley Powell (née Park), Megan Adams, Marie-Josée Gagnon, Jordan Flanagan, Sean Godwin, Leah Walker, Mack Bartlett, Julia Simmerling, Alex Spicer, Christina Weir, Alex Reiss, and Anna Crandall.
 
 ## Class III. Data set status and accessibility
 
@@ -248,11 +214,15 @@ History of updates of data:
 
 August 31, 2016: SJP added data from 2016 monitoring season.
 
-March 28, 2017: SJP added missing data from June 2010 sent by Scott Rogers. 
+March 28, 2017: SJP added missing data from June 2010 sent by Scott Rogers.
 
 October 8, 2017: SJP added data from 2017 monitoring season.
 
 August 10, 2018: SJP added data from 2018 monitoring season, updated fish data to include observations of "white eye" (see Fig. 7).
+
+July 10, 2020: NP added data from 2019 monitoring season.
+
+Aug 12, 2020: Restructured data repository in advance of our 2020 report. The dataset will  stand-alone with references and links to publications and reports.
 
 #### 3. Metadata status
 
@@ -267,12 +237,11 @@ August 31, 2016: 2016 data checked and added to database by SJP.
 October 8, 2017: 2017 data checked and added to database by SJP.
 August 10, 2018: 2018 data checked and added to database by SJP.
 
-
 ### B. Accessibility
 
 #### 1. Storage location and medium
 
-These metadata and associated data files have been submitted to the Ecology. The data and metadata are also accessible on GitHub (https://github.com/sjpeacock/Sea-lice-database), where they will be continually updated and added to in future monitoring years. 
+These metadata and associated data files have been submitted to the Ecology. The data and metadata are also accessible on GitHub (https://github.com/sjpeacock/Sea-lice-database), where they will be continually updated and added to in future monitoring years.
 
 #### 2. Contact person
 
@@ -287,7 +256,7 @@ Queries regarding accessing data via GitHub should be directed to corresponding 
 
 #### 3. Copyright restrictions
 
-These data are distributed under the Attribution 4.0 International (CC BY 4.0; http://creativecommons.org/licenses/by/4.0/legalcode). Users are free to share and adapt/analyse the data for any purpose, even commercially, providing there is attribution to the original data and any changes are detailed. 
+These data are distributed under the Attribution 4.0 International (CC BY 4.0; http://creativecommons.org/licenses/by/4.0/legalcode). Users are free to share and adapt/analyse the data for any purpose, even commercially, providing there is attribution to the original data and any changes are detailed.
 
 #### 4. Proprietary restrictions
 
@@ -311,17 +280,17 @@ There are no costs associated with acquiring and using these data, but we requir
 
 #### 1. Identity
 
-BroughtonSeaLice_siteData.csv
-BroughtonSeaLice_fishData.csv
+siteData.csv
+fishData.csv
 
 #### 2. Size (at time of initial publication in 2015)
 
-BroughtonSeaLice_siteData.csv: 492 sites, 28 KB 
+BroughtonSeaLice_siteData.csv: 492 sites, 28 KB
 BroughtonSeaLice_fishData.csv: 31 200 fish, 2.2 MB
 
 #### 3. Format and storage mode
 
-The data are downloadable as two .csv files from Ecology (Wiley Online Library) or the GitHub repository cited above. The two files contain (1) details of the sampling sites and (2) the individual fish health information. 
+The data are downloadable as two .csv files from Ecology (Wiley Online Library) or the GitHub repository cited above. The two files contain (1) details of the sampling sites and (2) the individual fish health information.
 
 #### 4. Header information
 
@@ -333,12 +302,10 @@ Mixed upper and lowercase. See B. Variable information for further details.
 
 #### 6. Special characters/fields
 
-All missing data are blank fields in the .csv files. We did not distinguish instances where data were not collected from instances where a data error was found and so that entry was removed. We also do not distinguish zeroes from missing data for the louse information in the fish data. Refer to section Louse identification in 3. Research methods for details on how the classification of sea lice changed from 2001 to 2015. For example, in 2001, sea lice were not identified to species and so all recorded observations of lice are in columns unid_cope, unid_PA, unid_adult and the blanks in other columns are missing data (not recorded; Table 2). We have summarized instances of zero observations by year in Table 2, and attempted to classify these zeros as missing data (i.e., not recorded) or true zeroes based on our knowledge of the methods employed that year. 
-
+All missing data are blank fields in the .csv files. We did not distinguish instances where data were not collected from instances where a data error was found and so that entry was removed. We also do not distinguish zeroes from missing data for the louse information in the fish data. Refer to section Louse identification in 3. Research methods for details on how the classification of sea lice changed from 2001 to 2015. For example, in 2001, sea lice were not identified to species and so all recorded observations of lice are in columns unid_cope, unid_PA, unid_adult and the blanks in other columns are missing data (not recorded; Table 2). We have summarized instances of zero observations by year in Table 2, and attempted to classify these zeros as missing data (i.e., not recorded) or true zeroes based on our knowledge of the methods employed that year.
 
 Table 2. Summary of the number of fish examined and the total numbers of lice of each stage/species recorded, as well as the number of fish health observations of each type. Zeroes are color coded to indicate those that are likely missing data (i.e., not recorded for that year; red), true zeroes (green) and unknown (yellow).
 ![Table2](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Table2.png)
-
 
 #### 7. Authentication procedures
 
@@ -350,7 +317,7 @@ Variable identities, descriptions, data types, the range of values, allowable va
 
 ### C. Data anomalies
 
-See 6. Special characters/fields. We removed data that seemed impossible (e.g., body depth < 3 mm and fork lengths < 20 mm) and set those fields to blank.  This included fork length and body depth measurements that were impossible given the range of data observed (e.g., 1 mm height with a fork length of 56 mm) or errors in data entry such as characters (e.g., `, -) instead of numbers or species codes. 
+See 6. Special characters/fields. We removed data that seemed impossible (e.g., body depth < 3 mm and fork lengths < 20 mm) and set those fields to blank.  This included fork length and body depth measurements that were impossible given the range of data observed (e.g., 1 mm height with a fork length of 56 mm) or errors in data entry such as characters (e.g., \`, -) instead of numbers or species codes.
 
 The fish data include 95 observations of sockeye salmon captured between 2012 and 2015.  We did not target sockeye, with the exception of sampling on June 20, 2010, but they were included on our scientific fishing permit, and we examined them for sea lice when they were captured. The sockeye captured on June 20, 2010 were sent to DFO for genetic stock ID and found to have originated from the Nimpkish River on Vancouver Island.
 
@@ -360,7 +327,7 @@ The fish data include 95 observations of sockeye salmon captured between 2012 an
 
 An example of the data entry form from 2014/2015 is given in Fig. 8.  This data entry form has varied over the years.
 
-![Fig8](https://github.com/sjpeacock/Sea-lice-database/blob/master/Metadata/Figures/Fig8.png)
+![Fig8](https://github.com/salmoncoast/Sea-lice-database/blob/master/Metadata/Figures/Fig8.png)
 **Fig. 8.** Example of completed data sheet for sea louse monitoring.  Upon returning to the field station, these data sheets were scanned, and later transcribed into digital format. The cop column has L or C for Lepeoptheirus or Caligus. ChalA and ChalB columns are hash marks for the number of chalimus A and chalimus B stages (no species).  All motile lice are noted in the motile column: pre-adult Lepeoptheirus (PAL), adult Lepeoptheirus (L), gravid Lepeoptheirus (GL), Caligus (C) or gravid Caligus (GC). The notes column has codes for motile scars (MS), predation scars (PS), hemorrhaging (H), eroded gill plate (EG), blue blotches (BB), and scales (SC). Any other information, including the type of predator scar and location of hemorrhaging, is written in the Comments column.
 
 #### 1. Data forms or acquisition methods
@@ -371,13 +338,13 @@ Physical raw data sheets from 2001-2009 are stored with Alexandra Morton (Rainco
 
 #### 3. Data entry verification procedures
 
-A technician entered raw data into a spreadsheet during the week following sampling. Immediately subsequent to the data entry step, each technician entering data performed a random check of several rows (salmon) to ensure that the data entered were correct and there were no mismatches with or omissions from the original data sheet (e.g. fork length and number of lice erroneously drawn from different lines in the sheet). 
+A technician entered raw data into a spreadsheet during the week following sampling. Immediately subsequent to the data entry step, each technician entering data performed a random check of several rows (salmon) to ensure that the data entered were correct and there were no mismatches with or omissions from the original data sheet (e.g. fork length and number of lice erroneously drawn from different lines in the sheet).
 
 When preparing this data paper, we checked that all data were consistent with credible ranges, and removed outliers (see C. Data anomalies).
 
 ### B. Quality assurance/quality control procedures
 
-We plotted fork length vs. height and checked any obvious anomalies against the raw data sheets.  If we were unable to verify the validity of obvious data errors, we set those fields to blanks. 
+We plotted fork length vs. height and checked any obvious anomalies against the raw data sheets.  If we were unable to verify the validity of obvious data errors, we set those fields to blanks.
 
 ### C. Related materials
 
@@ -404,17 +371,17 @@ The sea lice monitoring data have been used in the following publications:
 1. Morton, A.B., and Williams, R. 2003. First Report of a Sea Louse, Lepeophtheirus salmonis, Infestation on Juvenile Pink Salmon, Oncorhynchus gorbuscha, in Nearshore Habitat. Can. Field-Naturalist 117: 634–641.
 2. Morton, A., Routledge, R., Peet, C., and Ladwig, A. 2004. Sea lice (Lepeophtheirus salmonis) infection rates on juvenile pink (Oncorhynchus gorbuscha) and chum (Oncorhynchus keta) salmon in the nearshore marine environment of British Columbia, Canada. Can. J. Fish. Aquat. Sci. 61: 147–157. doi: 10.1139/f04-016.
 3. Morton, A., Routledge, R.D., and Williams, R. 2005. Temporal Patterns of Sea Louse Infestation on Wild Pacific Salmon in Relation to the Fallowing of Atlantic Salmon Farms. North Am. J. Fish. Manag. 25: 811–821. doi: 10.1577/M04-149.1.
-4. Morton, A., and Routledge, R. 2005. Mortality rates for juvenile pink (Oncorhynchus gorbuscha) and chum (O. keta) salmon infested with sea lice (Lepeophtheirus salmonis) in the Broughton Archipelago. Alaska Fish. Res. Bull. 11: 146–152. Available from http://www.adfg.alaska.gov/static-f/home/library/PDFs/afrb/mortv11n2.pdf. 
-5. Morton, A., and Routledge, R. 2006. Fulton’s Condition Factor: Is It a Valid Measure of Sea Lice Impact on Juvenile Salmon? North Amer. J. Fish. Mgmt 26: 56–62. doi: 10.1577/M05-068.1. 
+4. Morton, A., and Routledge, R. 2005. Mortality rates for juvenile pink (Oncorhynchus gorbuscha) and chum (O. keta) salmon infested with sea lice (Lepeophtheirus salmonis) in the Broughton Archipelago. Alaska Fish. Res. Bull. 11: 146–152. Available from http://www.adfg.alaska.gov/static-f/home/library/PDFs/afrb/mortv11n2.pdf.
+5. Morton, A., and Routledge, R. 2006. Fulton’s Condition Factor: Is It a Valid Measure of Sea Lice Impact on Juvenile Salmon? North Amer. J. Fish. Mgmt 26: 56–62. doi: 10.1577/M05-068.1.
 6. Krkosek, M., Ford, J., Morton, A., Lele, S., Myers, R.A., and Lewis, M. 2007. Declining wild salmon populations in relation to parasites from farm salmon. Science 318, 1772-1775.
 7. Peacock, S.J., Krkosek, M., Proboszcz, S., Orr, C., and Lewis, M.A. 2013. Cessation of a salmon decline with control of parasites. Ecol. Appl. 23: 606–620. doi: 10.1890/12-0519.1.
-8. Peacock, S.J., Connors, B.M., Krkosek, M., Irvine, J.R., and Lewis, M.A. 2014. Can reduced predation offset negative effects of sea louse parasites on chum salmon? Proc. R. Soc. B Biol. Sci. 281: 20132913. doi: 10.1098/rspb.2013.2913. 
+8. Peacock, S.J., Connors, B.M., Krkosek, M., Irvine, J.R., and Lewis, M.A. 2014. Can reduced predation offset negative effects of sea louse parasites on chum salmon? Proc. R. Soc. B Biol. Sci. 281: 20132913. doi: 10.1098/rspb.2013.2913.
 
 ### G. History of data set usage
 
 #### 1. Data request history
 
-To be updated as data requests are made. 
+To be updated as data requests are made.
 
 #### 2. Data set update history
 
@@ -433,14 +400,10 @@ Reviewed by Stephanie Peacock on December 15, 2015.
 
 This section will be completed as questions are posed.
 
-
-
 ## Acknowledgements
 Many individuals helped in data collection and supported those who spent countless hours in the field. In particular, we would like to thank members of the Echo Bay community including Eric Nelson, Billy Proctor, Chris and Hannah Bennett, Yvonne and Al Maximchuck, and Pierre Landry. Thanks to Glenna Garramone for meals and music and John Taylor for providing a home for sea lousers in transit.
 
-
-
-## Literature Cited 
+## Literature Cited
 
 * Brauner, C.J., Sackville, M., Gallagher, Z., Tang, S., Nendick, L., and Farrell, A.P. 2012. Physiological consequences of the salmon louse (*Lepeophtheirus salmonis*) on juvenile pink salmon (*Oncorhynchus gorbuscha*): implications for wild salmon ecology and management, and for salmon aquaculture. Philos. Trans. R. Soc. Lond. B. Biol. Sci. 367: 1770-9. doi: 10.1098/rstb.2011.0423.
 * Connors, B.M., Lagasse, C., and Dill, L.M. 2011. What's love got to do with it? Ontogenetic changes in drivers of dispersal in a marine ectoparasite. Behav. Ecol. 22: 588–593. doi: 10.1093/beheco/arr024.
